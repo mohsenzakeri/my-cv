@@ -1,0 +1,408 @@
+%------------------------------------------------------------------------------
+% CV in Latex
+% Author : Charles Rambo
+% Based off of: https://github.com/sb2nov/resume and Jake's Resume on Overleaf
+% Most recently updated version may be found at https://github.com/fizixmastr 
+% License : MIT
+%------------------------------------------------------------------------------
+
+\documentclass[A4,11pt]{article}
+%\documentclass[letterpaper,11pt]{article} %For use in US
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{tikz}
+\input{glyphtounicode}
+
+\begin{comment}
+I am by no means a professional when it comes to the CV's/resumes, I have
+received various trainings on how to write a CV and resume from my high 
+school, as well as the Austin College and University of Eastern Finland's
+career counseling departments. As I intend to share my CV as a template, I 
+feel that it is my responsibility to provide explanations of my work.
+\end{comment}
+
+
+%-----FONT OPTIONS-------------------------------------------------------------
+\begin{comment}
+The font of the document will impact not just how readable it is, but how it is
+perceived. In the "The Craft of Scientific Writing" by Michael Alley, shares a
+common fonts for publication as well as their use. I have chosen to use
+Palatino for its legibility, some others are given below. There is far too much
+about typography to discus here. Note: serif fonts have short projecting
+strokes, sans-serif fonts are sans (without) these strokes.
+\end{comment}
+
+
+% serif
+ \usepackage{palatino}
+% \usepackage{times} %This is the default as well
+% \usepackage{charter}
+
+% sans-serif
+% \usepackage{helvet}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+%-----PAGE SETUP---------------------------------------------------------------
+%\usepackage{bibentry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage[autostyle]{csquotes}
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\addbibresource{lib.bib}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-1cm}
+\addtolength{\evensidemargin}{-1cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-1cm}
+\addtolength{\textheight}{2cm}
+
+% Margins for US Letter size
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+%\addtolength{\topmargin}{-.5in}
+%\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that .pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-----CUSTOM COMMANDS FOR FORMATTING SECTIONS----------------------------------
+\newcommand{\CVItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\CVSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \text{\small#1} & \text{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
+% \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} % Uncomment for US
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\begin{itemize}}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%------------------------------------------------------------------------------
+% CV STARTS HERE  %
+%------------------------------------------------------------------------------
+\begin{document}
+
+%-----HEADING------------------------------------------------------------------
+\begin{comment}
+In Europe it is common to include a picture of ones self in the CV. Select
+which heading appropriate for the document you are creating.
+
+\begin{minipage}[c]{0.05\textwidth}
+\-\
+\end{minipage}
+\begin{minipage}[c]{0.2\textwidth}
+\begin{tikzpicture}
+    % \clip (0,0) circle (1.5cm);
+    % \node at (0.0,0.0) {\includegraphics[width = 3cm]{MohsenZakeri}}; 
+    % if necessary the picture may be moved by changing the at (coordinates)
+    % width defines the 'zoom' of the picture
+\end{tikzpicture}
+%\hfill\vline\hfill
+\end{minipage}
+
+\end{comment}
+
+\begin{minipage}[c]{0.4\textwidth}
+    \textbf{\Huge \scshape{Mohsen Zakeri}} \\ \vspace{1pt} 
+    % \scshape sets small capital letters, remove if desired
+    \small{+1 631-877-5174} \\
+    \href{mailto:mohsen@umd.edu}{\underline{mohsen@umd.edu}}\\
+    % Be sure to use a professional *personal* email address
+    \href{https://www.linkedin.com/in/mohsen-zakeri-56017576/}{\underline{linkedin.com/in/mohsen-zakeri-56017576}} \\
+    % you should adjust you linked in profile name to be professional and recognizable
+    \href{https://github.com/mohsenzakeri}{\underline{https://github.com/mohsenzakeri}}
+\end{minipage}
+
+% Without picture
+%\begin{center}
+%    \textbf{\Huge \scshape Charles Rambo} \\ \vspace{1pt} %\scshape sets small capital letters, remove if desired
+%    \small +1 123-456-7890 $|$ 
+%    \href{mailto:you@provider.com}{\underline{you@provider.com}} $|$\\
+%    % Be sure to use a professional *personal* email address
+%    \href{https://linkedin.com/in/your-name-here}{\underline{linkedin.com/in/charles-rambo}} $|$
+%    % you should adjust you linked in profile name to be professional and recognizable
+%    \href{https://github.com/fizixmastr}{\underline{github.com/fizixmastr}}
+%\end{center}
+
+
+
+\begin{comment}
+This CV was written for specifically for positions I was applying for in
+academia, and then modified to be a template.
+
+A standard CV is about two pages long where as a resume in the US is one page.
+sections can be added and removed here with this in mind. In my experience, 
+education, and applicable work experience and skills are the most import things
+to include on a resume. For a CV the Europass CV suggests the categories: Work
+Experience, Education and Training, Language Skills, Digital Skills,
+Communication and Interpersonal Skills, Conferences and Seminars, Creative Works
+Driver's License, Hobbies and Interests, Honors and Awards, Management and
+Leadership Skills, Networks and Memberships, Organizational Skills, Projects,
+Publications, Recommendations, Social and Political Activities, Volunteering.
+
+Your goal is to convey a who, what , when, where, why for every item you share. 
+The who is obviously you, but I believe the rest should be done in that order.
+For example below. An employer cares most about the degree held and typically 
+less about the institution or where it is located (This is still good 
+information though). Whatever order you choose be consistent throughout.
+\end{comment}
+
+%-----EDUCATION----------------------------------------------------------------
+\section{Education}
+  \CVSubHeadingListStart
+%    \CVSubheading % Example
+%      {Degree Achieved}{Years of Study}
+%      {Institution of Study}{Where it is located}
+    \CVSubheading
+      {{PhD $|$ \emph{\small{Computer Science, Advisor: Prof. Rob Patro}}}}{Aug. 2018 -- present}
+      {University of Maryland}{College Park, MD}
+    \CVSubheading
+      {{MSc $|$ \emph{\small{Computer Science, Advisor: Prof. Rob Patro}}}}{Aug. 2015 -- May. 2017}
+      {Stony Brook University}{Stony Brook, NY}
+    \CVSubheading
+      {{BSc $|$ \emph{\small{Computer Engineering, Major: Software Engineering}}}}{Sep. 2011 -- Jun. 2015}
+      {University of Tehran}{Tehran, Iran}
+  \CVSubHeadingListEnd
+
+
+%-----WORK EXPERIENCE----------------------------------------------------------
+\begin{comment}
+try to briefly explain what you did and why it is relevant to the position you
+are seeking
+\end{comment}
+
+\section{Work Experience}
+  \CVSubHeadingListStart
+%    \CVSubheading %Example
+%      {What you did}{When you worked there}
+%      {Who you worked for}{Where they are located}
+%      \CVItemListStart
+%        \CVItem{Why it is important to this employer}
+%      \CVItemListEnd
+
+    \CVSubheading
+      {Computational Biologist}{Jun. 2021 -- Aug. 2021}
+      {Ocean Genomics}{Pittsburgh, PA}
+      \CVItemListStart
+        \CVItem{Development of a software for converting a genome coordinated SAM file to a transcriptomic coordinated SAM file.}
+      \CVItemListEnd
+    \CVSubheading
+      {Software Engineer}{Sep. 2017 -- Aug. 2018}
+      {Green Silver Leaves Corp.}{Tehran, Iran}
+      \CVItemListStart
+        \CVItem{Development of new features for a healthcare system which specializes in doctor-patient communications}
+        \CVItem{Led a marketing team for reaching out to medical doctors for introducing the product}
+        \CVItem{Facilitating the day-to-day operations of the office}
+      \CVItemListEnd
+  \CVSubHeadingListEnd
+
+%-----PROJECTS AND RESEARCH----------------------------------------------------
+\begin{comment}
+Ideally the title of the work should speak for what it is. However if you feel
+like you should explain more about why the project is applicable to this job,
+use item list as is shown in the work experience section.
+\end{comment}
+
+\section{Projects and Research}
+  \CVSubHeadingListStart
+%    \CVSubheading
+%      {Title of Work}{When it was done}
+%      {Institution you worked with}{unused}
+    \CVSubheading
+      {Design and development of efficient methods for single cell analysis}{2020 -- present}
+      {University of Maryland}\\
+      {{Exploring how different representations of cell by gene UMI count matrices affects the accuracy of single cell downstream analysis such as clustering and dimensionality reduction}$|$ \emph{\small{Python}}}
+    \CVSubheading
+      {Improving the accuracy of short reads RNA-seq quantification}
+      {2016 -- present}
+      {Stony Brook University}\\
+      {{Increasing the fidelity of the equivalence class-based approximation model of short read RNA-seq model to improve the accuracy of the estimates in challenging cases as well as exploring how different aspects of the RNA-seq reads, like transcript coverage, affects the accuracy of the estimates}  $|$ \emph{\small{C++}} }
+    \CVSubheading
+      {Design and Development of a fast and accurate short read aligner}{2019 -- 2020}
+      {Stony Brook University, University of Maryland}\\
+      {{Puffaligner is an aligner based on the Pufferfish index which aligns different types of short read aligners including RNA-seq, DNA-seq and metagenomic reads}$|$ \emph{\small{C++}} }
+    \CVSubheading
+      {Improving the lightweight alignment methods for RNA-seq quantification}{2017 -- 2019}
+      {Stony Brook University, University of Maryland}\\
+      {{Increasing the specificity and sensitivity of lightweight alignment methods which are used in fast RNA-seq quantification approaches} $|$ \emph{\small{C++}} }
+    \CVSubheading
+      {Design and development of a pipeline for metagenomic abundance estimation}{2018}
+      {Stony Brook University}\\
+      {{Design and development of a fast and accurate quantification method for short read metagenomic reads using lightweight alignment methods and optimization with Expected Maximization}$|$ \emph{\small{C++}} }
+  \CVSubHeadingListEnd
+
+%-----TEACHING EXPERIENCE------------------------------------------------------
+\begin{comment}
+Section is here as it applied to my application for positions in academia. 
+Remember to tailor the resume for to the position.
+\end{comment}
+
+\section{Teaching Experience}
+  \CVSubHeadingListStart
+%    \CVSubheading
+%      {What}{When}
+%      {School}{Where}
+    \CVSubheading
+      {Social Networks, Discrete Mathematics, Computer Programming III (TA)}{2015 -- 2017}
+      {Stony Brook University}{Stony Brook, NY}
+    \CVSubheading
+      {Analysis of Algorithms for graduate students (Teaching Assistant)}{2016}
+      {Stony Brook University}{Stony Brook, NY}
+    \CVSubheading
+      {Advanced Programming, Artificial Intelligence (Teaching Assistant)}{Fall 2014 -- Spring 2015}
+      {University of Tehran}{Tehran, Iran}
+  \CVSubHeadingListEnd
+  
+%\nobibliography*
+%\bibliographystyle{plain}
+
+	\nocite{*}
+	
+%\section{Publications}
+%	\nocite{zakeri2021likeforlike}
+
+\begin{comment}
+    \section{Publications}
+    \begin{itemize}
+    \end{itemize}
+
+    \item \textbf{Zakeri, Mohsen}, Avi Srivastava, Hirak Sarkar, and Rob Patro. "A like-for-like comparison of lightweight-mapping pipelines for single-cell RNA-seq data pre-processing." bioRxiv (2021).
+    \item Srivastava, Avi, \textbf{Mohsen Zakeri}, Hirak Sarkar, Charlotte Soneson, Carl Kingsford, and Rob Patro. "Accounting for fragments of unexpected origin improves transcript quantification in RNA-seq simulations focused on increased realism." bioRxiv (2021).
+    \item Almodaresi, Fatemeh, \textbf{Mohsen Zakeri}, and Rob Patro. "Puffaligner: An efficient and accurate aligner based on the pufferfish index." bioRxiv (2020).
+    \item Srivastava, Avi, Laraib Malik, Hirak Sarkar, \textbf{Mohsen Zakeri}, Fatemeh Almodaresi, Charlotte Soneson, Michael I. Love, Carl Kingsford, and Rob Patro. "Alignment and mapping methodology influence transcript abundance estimation." Genome biology 21, no. 1 (2020): 1-29.
+    \item Sarkar, Hirak, \textbf{Mohsen Zakeri}, Laraib Malik, and Rob Patro. "Towards selective-alignment: Bridging the accuracy gap between alignment-based and alignment-free transcript quantification." In Proceedings of the 2018 ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics, pp. 27-36. 2018.
+    \item \textbf{Zakeri, Mohsen}, Avi Srivastava, Fatemeh Almodaresi, and Rob Patro. "Improved data-driven likelihood factorizations for transcript abundance estimation." Bioinformatics 33, no. 14 (2017): i142-i151.
+    \item Almodaresi, Fatemeh, Lyle Ungar, Vivek Kulkarni, \textbf{Mohsen Zakeri}, Salvatore Giorgi, and H. Andrew Schwartz. "On the distribution of lexical features at multiple levels of analysis." In Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), pp. 79-84. 2017.
+    \begin{itemize}
+        \item \textbf{Accurate, efficient, and uncertainty-aware expression quantification of single-cell RNA-seq data}, Cold Spring Harbor Lab, Biological Data Science 2020
+        \item \textbf{Cedar: scalable, accurate and fast metagenomic abundance estimation}, RECOMB 2019
+    \end{itemize}
+
+\end{comment}
+
+\section{Publications}
+\begin{refsection}
+\nocite{he2021alevin}
+\nocite{almodaresi2021puffaligner}
+\nocite{zakeri2021likeforlike}
+\nocite{srivastava2021accounting}
+\nocite{srivastava2019alignment}
+\nocite{ismb2017factorization}
+\nocite{sarkar2018towards}
+\nocite{almodaresi2017distribution}
+\printbibliography[heading = none]
+\end{refsection}
+
+%-----CONFERENCES AND PRESENTATIONS--------------------------------------------
+\begin{comment}
+Again the title should have already been enough, but if it is necessary to add
+descriptions maintain the consistency from prior sections
+\end{comment}
+
+\section{Conferences and Presentations}
+\begin{refsection}
+\nocite{Sarkar2020}
+\nocite{CedarPoster2019}
+\printbibliography[heading = none]
+\end{refsection}
+
+%-----HONORS AND AWARDS--------------------------------------------------------
+\section{Honors and Awards}
+  \CVSubHeadingListStart
+%    \CVSubheading %Example
+%      {What}{When}
+%      {Short Description}{}
+    \CVSubheading
+      {Travel Fellowship for attending ISMB/ECCB}{2017}
+      {My paper was accepted in the proceedings section of the conference}{}
+    \CVSubheading
+      {Special CS Chair Fellowship from Sony Brook University}{2015}
+      {Awarded upon admission for the PhD program}{}
+    \CVSubheading
+      {Full Scholarship for Masters program of University of Tehran}{2015}
+      {The scholarship was awarded to the top ten percent of students based on cumulative GPA}{}
+    \CVSubheading
+      {FOE award from the Engineering Department of University of Tehran}{2012 and 2014}
+      {For ranking amongst top three computer engineering students based on cumulative GPA}{}
+  \CVSubHeadingListEnd
+
+
+%-----COMMUNITY INVOLVEMENT----------------------------------------------------
+\begin{comment}
+\section{Community Involvement}
+  \CVSubHeadingListStart
+%    \CVSubheading %Example
+%      {What you did}{When you worked there}
+%      {Who you worked for}{Where they are located}
+    \CVSubheading
+      {Austin College Community Tutors}{Fall 2017 -- Fall 2018}
+      {Free tutoring for local students in science and mathematics}{Sherman, TX}
+    \CVSubheading
+      {River Legacy Nature Center}{September 2015 -- August 2016}
+      {Provided assistance for various youth science education programs}{Arlington, TX}
+    \CVSubheading
+      {Back on My Feet Run Club}{April 2014 -- August 2015}
+      {Helping to reestablish homeless persons in the community}{Austin, TX}
+  \CVSubHeadingListEnd
+\end{comment}
+%-----SKILLS-------------------------------------------------------------------
+\begin{comment}
+This section is compressed from the various skills sections that Euro CV
+recommends.
+\end{comment}
+
+\section{Skills}
+ \begin{itemize}[leftmargin=0.5cm, label={}]
+    \small{\item{
+     \textbf{Languages}{: Farsi (Native), English (proficient)} \\
+     \textbf{Programming}{: C++, Python (NumPy, SciPy, Matplotlib, Pandas), Rust, R, C\#} \\
+     \textbf{Document Creation}{: Microsoft Office Suite, LaTex} \\
+    }}
+ \end{itemize}
+    
+%------------------------------------------------------------------------------
+\end{document}
