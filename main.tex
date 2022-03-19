@@ -7,6 +7,7 @@
 %------------------------------------------------------------------------------
 
 \documentclass[A4,11pt]{article}
+\renewcommand{\baselinestretch}{.8} 
 %\documentclass[letterpaper,11pt]{article} %For use in US
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -16,6 +17,7 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks,urlcolor=blue}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{tikz}
@@ -58,7 +60,10 @@ strokes, sans-serif fonts are sans (without) these strokes.
 \usepackage{lmodern}
 \usepackage[english]{babel}
 \usepackage[autostyle]{csquotes}
-\usepackage[backend=biber,style=authoryear]{biblatex}
+%\usepackage[backend=biber,style=authoryear]{biblatex}
+\usepackage[minnames=4, 
+            maxnames=99,
+            style=numeric]{biblatex}
 \addbibresource{lib.bib}
 
 % Adjust margins
@@ -198,13 +203,13 @@ information though). Whatever order you choose be consistent throughout.
 %      {Degree Achieved}{Years of Study}
 %      {Institution of Study}{Where it is located}
     \CVSubheading
-      {{PhD $|$ \emph{\small{Computer Science, Advisor: Prof. Rob Patro}}}}{Aug. 2018 -- present}
+      {{PhD $|$ \emph{\small{Computer Science, Advisor: Prof. Rob Patro}}}}{Dec. 2021}
       {University of Maryland}{College Park, MD}
     \CVSubheading
-      {{MSc $|$ \emph{\small{Computer Science, Advisor: Prof. Rob Patro}}}}{Aug. 2015 -- May. 2017}
+      {{MSc $|$ \emph{\small{Computer Science, Advisor: Prof. Rob Patro}}}}{May. 2017}
       {Stony Brook University}{Stony Brook, NY}
     \CVSubheading
-      {{BSc $|$ \emph{\small{Computer Engineering, Major: Software Engineering}}}}{Sep. 2011 -- Jun. 2015}
+      {{BSc $|$ \emph{\small{Computer Engineering, Major: Software Engineering}}}}{Jun. 2015}
       {University of Tehran}{Tehran, Iran}
   \CVSubHeadingListEnd
 
@@ -225,18 +230,24 @@ are seeking
 %      \CVItemListEnd
 
     \CVSubheading
-      {Computational Biologist}{Jun. 2021 -- Aug. 2021}
+      {Computational Biologist}{2021} %{Jun. 2021 -- Aug. 2021}
       {Ocean Genomics}{Pittsburgh, PA}
       \CVItemListStart
-        \CVItem{Development of a software for converting a genome coordinated SAM file to a transcriptomic coordinated SAM file.}
+        \CVItem{I developed Mudskipper which is a software for converting alignments in a SAM file, which is used for storing
+sequence alignments, with genomic coordinates to transcriptomic coordinated alignments. $|$ \emph{\small{Rust}}}
+        \CVItem{\href{https://github.com/OceanGenomics/pufferfish/tree/soft-clip}{Puffaligner} is a fast and efficient aligner for short reads to a collection of reference sequences. I collaborated for
+        debugging steps of developing the softclip feature for this aligner. $|$ \emph{\small{C++}}}
       \CVItemListEnd
     \CVSubheading
-      {Software Engineer}{Sep. 2017 -- Aug. 2018}
+      {Software Engineer}{2017 - 2018} %{Sep. 2017 -- Aug. 2018}
       {Green Silver Leaves Corp.}{Tehran, Iran}
       \CVItemListStart
-        \CVItem{Development of new features for a healthcare system which specializes in doctor-patient communications}
-        \CVItem{Led a marketing team for reaching out to medical doctors for introducing the product}
-        \CVItem{Facilitating the day-to-day operations of the office}
+        \CVItem{\href{https://resaa.net/}{Resaa} is an online system for doctor-patient communications where patients could charge their account to call
+        their doctors. I collaborated for developing various features for the adminstration website and the accounting
+        policy system. $|$ \emph{\small{C\#}}}
+        %\CVItem{Development of new features for a healthcare system which specializes in doctor-patient communications}
+        %\CVItem{Led a marketing team for reaching out to medical doctors for introducing the product}
+        %\CVItem{Facilitating the day-to-day operations of the office}
       \CVItemListEnd
   \CVSubHeadingListEnd
 
@@ -253,26 +264,58 @@ use item list as is shown in the work experience section.
 %      {Title of Work}{When it was done}
 %      {Institution you worked with}{unused}
     \CVSubheading
-      {Design and development of efficient methods for single cell analysis}{2020 -- present}
+      {Efficient and accurate methods for single-cell RNA-seq analysis}{2020 - present}
       {University of Maryland}\\
-      {{Exploring how different representations of cell by gene UMI count matrices affects the accuracy of single cell downstream analysis such as clustering and dimensionality reduction}$|$ \emph{\small{Python}}}
+      {I contributed to the design and development of a variation of pseudoalignment with structural constraints 
+      (\href{https://github.com/COMBINE-lab/pufferfish/blob/develop/src/MemCollector.cpp#L586}{sketch mode}) 
+      for mapping single-cell RNA-seq reads which is used with 
+      \href{https://github.com/COMBINE-lab/alevin-fry}{Alevin-fry}. $|$ \emph{\small{C++ and Rust}}}
     \CVSubheading
-      {Improving the accuracy of short reads RNA-seq quantification}
-      {2016 -- present}
-      {Stony Brook University}\\
-      {{Increasing the fidelity of the equivalence class-based approximation model of short read RNA-seq model to improve the accuracy of the estimates in challenging cases as well as exploring how different aspects of the RNA-seq reads, like transcript coverage, affects the accuracy of the estimates}  $|$ \emph{\small{C++}} }
-    \CVSubheading
-      {Design and Development of a fast and accurate short read aligner}{2019 -- 2020}
+      {A fast and accurate aligner for short reads}{2019 - 2020}
       {Stony Brook University, University of Maryland}\\
-      {{Puffaligner is an aligner based on the Pufferfish index which aligns different types of short read aligners including RNA-seq, DNA-seq and metagenomic reads}$|$ \emph{\small{C++}} }
+      {\href{https://github.com/COMBINE-lab/pufferfish/tree/cigar-strings}{Puffaligner}
+      is an aligner based on the Pufferfish index which aligns different types of short reads including RNA-seq,
+      DNA-seq and metagenomic reads to a collection of indices. I was involved in the main stages of the development and
+      debugging for this tool. $|$ \emph{\small{C++}}}
     \CVSubheading
-      {Improving the lightweight alignment methods for RNA-seq quantification}{2017 -- 2019}
-      {Stony Brook University, University of Maryland}\\
-      {{Increasing the specificity and sensitivity of lightweight alignment methods which are used in fast RNA-seq quantification approaches} $|$ \emph{\small{C++}} }
-    \CVSubheading
-      {Design and development of a pipeline for metagenomic abundance estimation}{2018}
+      {A pipeline for metagenomic abundance estimation}{2018}
       {Stony Brook University}\\
-      {{Design and development of a fast and accurate quantification method for short read metagenomic reads using lightweight alignment methods and optimization with Expected Maximization}$|$ \emph{\small{C++}} }
+      {I contributed to the design and development of \href{https://github.com/COMBINE-lab/pufferfish/tree/AGAMEMNON}{Cedar} 
+      which is a fast and accurate quantification method for short
+      read metagenomic reads using lightweight alignment methods and optimization with Expected Maximization. $|$ \emph{\small{C++}}}
+    \CVSubheading
+      {Improving the accuracy of lightweight RNA-seq mapping methods}{2017 - 2019}
+      {Stony Brook University}\\
+      {I contributed to the development of the idea of \href{https://github.com/COMBINE-lab/RapMap/tree/selective-alignment}{Selective-alignment}
+      for increasing the specificity and sensitivity of
+      lightweight alignment methods which are used in fast RNA-seq quantification approaches. $|$ \emph{\small{C++}}}
+    \CVSubheading
+      {Improving the accuracy of fast RNA-seq quanfitication methods}{2016 - 2017}
+      {Stony Brook University}\\
+      {I modified the probablistic model of bulk RNA-seq in \href{https://github.com/COMBINE-lab/salmon}{Salmon}
+      to increase the fidelity of the equivalence class-based \href{https://github.com/COMBINE-lab/salmon/tree/factorizations}{factorization}
+      which led to an improvement of the accuracy of the estimations in challenging cases. $|$ \emph{\small{C++}}}
+    % \CVSubheading
+    %   {Design and development of efficient methods for single cell analysis}{2020 -- present}
+    %   {University of Maryland}\\
+    %   {{Exploring how different representations of cell by gene UMI count matrices affects the accuracy of single cell downstream analysis such as clustering and dimensionality reduction}$|$ \emph{\small{Python}}}
+    % \CVSubheading
+    %   {Improving the accuracy of short reads RNA-seq quantification}
+    %   {2016 -- present}
+    %   {Stony Brook University}\\
+    %   {{Increasing the fidelity of the equivalence class-based approximation model of short read RNA-seq model to improve the accuracy of the estimates in challenging cases as well as exploring how different aspects of the RNA-seq reads, like transcript coverage, affects the accuracy of the estimates}  $|$ \emph{\small{C++}} }
+    % \CVSubheading
+    %   {Design and Development of a fast and accurate short read aligner}{2019 -- 2020}
+    %   {Stony Brook University, University of Maryland}\\
+    %   {{Puffaligner is an aligner based on the Pufferfish index which aligns different types of short read aligners including RNA-seq, DNA-seq and metagenomic reads}$|$ \emph{\small{C++}} }
+    % \CVSubheading
+    %   {Improving the lightweight alignment methods for RNA-seq quantification}{2017 -- 2019}
+    %   {Stony Brook University, University of Maryland}\\
+    %   {{Increasing the specificity and sensitivity of lightweight alignment methods which are used in fast RNA-seq quantification approaches} $|$ \emph{\small{C++}} }
+    % \CVSubheading
+    %   {Design and development of a pipeline for metagenomic abundance estimation}{2018}
+    %   {Stony Brook University}\\
+    %   {{Design and development of a fast and accurate quantification method for short read metagenomic reads using lightweight alignment methods and optimization with Expected Maximization}$|$ \emph{\small{C++}} }
   \CVSubHeadingListEnd
 
 %-----TEACHING EXPERIENCE------------------------------------------------------
@@ -347,6 +390,7 @@ descriptions maintain the consistency from prior sections
 \begin{refsection}
 \nocite{Sarkar2020}
 \nocite{CedarPoster2019}
+\nocite{zakeri2017poster}
 \printbibliography[heading = none]
 \end{refsection}
 
