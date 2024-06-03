@@ -156,9 +156,10 @@ which heading appropriate for the document you are creating.
     \textbf{\Huge \scshape{Mohsen Zakeri}} \\ 
     % \scshape sets small capital letters, remove if desired
     %\small{+1 631-877-5174} \\
-    \href{mailto:mzakeri1@jhu.edu}{\underline{mzakeri1@jhu.edu}}\\
+    \href{https://www.mohsenzakeri.com}{\underline{mohsenzakeri.com}} \\
+    \href{mailto:mohs.zakeri@gmail.com}{\underline{mohs.zakeri@gmail.com}} \\
     % Be sure to use a professional *personal* email address
-    \href{https://www.linkedin.com/in/mohsen-zakeri-56017576/}{\underline{linkedin.com/in/mohsen-zakeri-56017576}} \\
+    % \href{https://www.linkedin.com/in/mohsen-zakeri-56017576/}{\underline{linkedin.com/in/mohsen-zakeri-56017576}} \\
     % you should adjust you linked in profile name to be professional and recognizable
     \href{https://github.com/mohsenzakeri}{\underline{https://github.com/mohsenzakeri}}
 \end{minipage}
@@ -270,11 +271,13 @@ use item list as is shown in the work experience section.
 %      {Title of Work}{When it was done}
 %      {Institution you worked with}{unused}
     \CVSubheading
-    {Efficient Nanopore read classification}{2022 - present}
+    {Efficient and scalable indexing of pangenomes}{2022 - present}
+    %{Efficient Nanopore read classification}
     {Johns Hopkins University}\\
-    {I have implemented \href{https://github.com/mohsenzakeri/marlin}{Marlin} which is
-    a data structure based on Move-Structure for indexing pangenomes. Marlin computes
-    matching statistics for Nanopore reads very quickly in order to be classified. $|$ \emph{\small{C++}}}
+    {I have implemented \href{https://github.com/mohsenzakeri/movi}{Movi} which is
+    a data structure based on Move-Structure for indexing pangenomes. Movi computes
+    exact matching queries (pseudo-matching lengths) for short and long reads.
+    The Pseudo-matching lengths computed by Movi is used for real-time classification of Nanopore reads. $|$ \emph{\small{C++}}}
 
     \CVSubheading
     {Efficient and accurate methods for single-cell RNA-seq analysis}{2020 - 2021}
@@ -388,21 +391,29 @@ Remember to tailor the resume for to the position.
 
 \end{comment}
 
-\section{Publications}
+\section{Peer Reviewed Publications}
+
 \begin{refsection}
-\nocite{zakeri2023movi}
+*: co-first authorship
 \nocite{shivakumar2023sigmoni}
 \nocite{wu2023seesaw}
 \nocite{he2022alevin}
 \nocite{skoufos2022agamemnon}
 \nocite{almodaresi2021puffaligner}
-\nocite{zakeri2021likeforlike}
-\nocite{srivastava2021accounting}
 \nocite{srivastava2020alignment}
 \nocite{sarkar2018towards}
 \nocite{ismb2017factorization}
 %\nocite{almodaresi2017distribution}
 \printbibliography[heading = none]
+\end{refsection}
+
+\section{Pre-prints}
+\begin{refsection}
+  \nocite{depuydt2023r}
+  \nocite{zakeri2023movi}
+  \nocite{srivastava2021accounting}
+  \nocite{zakeri2021likeforlike}
+  \printbibliography[heading = none]
 \end{refsection}
 
 %-----CONFERENCES AND PRESENTATIONS--------------------------------------------
@@ -411,8 +422,10 @@ Again the title should have already been enough, but if it is necessary to add
 descriptions maintain the consistency from prior sections
 \end{comment}
 
+
 \section{Conferences and Presentations}
 \begin{refsection}
+\nocite{zakeri2024recombseq}
 \nocite{Zakeri2023informatics}
 %\nocite{Zakeri2023wemsa}
 \nocite{Shivakumar2023Poster}
@@ -445,6 +458,15 @@ descriptions maintain the consistency from prior sections
       {FOE award from the Engineering Department of University of Tehran}{2012 and 2014}
       {For ranking amongst top three computer engineering students based on cumulative GPA}{}
   \CVSubHeadingListEnd
+
+  \section{External Research Support}
+  I collaborated in the writing of the grant with my PI (Ben Langmead)\\
+  \CVSubHeadingListStart
+  \CVSubheading
+  {Efficient and scalable pangenomes with the move structure} {2/1/2024 - 2/28/2026}
+  {NIH/NHGRI R21 grant R21HG013433}{}
+  \CVSubHeadingListEnd
+
 
 
 %-----COMMUNITY INVOLVEMENT----------------------------------------------------
