@@ -295,16 +295,16 @@ use item list as is shown in the work experience section.
       \CVItem{Contributed to the design of \href{https://github.com/vshiv18/sigmoni}{Sigmoni} for multi-class classification of Nanopore signals using a compressed
       full-text index (r-index).}
       \CVItemListEnd
-    \CVSubheading
-      {Converting genomic to transcriptomic coordinates}{Summer 2021} %{Jun. 2021 -- Aug. 2021}
-      {Computational biologist intern at Ocean Genomics, Pittsburgh, PA}{ }
-      \CVItemListStart
-      \CVItem
-      {Developed \href{https://github.com/OceanGenomics/mudskipper}{Mudskipper}, a software tool that converts alignments in SAM files - commonly used for storing
-sequence alignments - from genomic coordinates to transcriptomic coordinates. $|$ \emph{\small{Rust}}}
-        %\CVItem{\href{https://github.com/OceanGenomics/pufferfish/tree/soft-clip}{Puffaligner} is a fast and efficient aligner for short reads to a collection of reference sequences. I collaborated for
-        %debugging steps of developing the softclip feature for this aligner. $|$ \emph{\small{C++}}}
-      \CVItemListEnd
+%     \CVSubheading
+%       {Converting genomic to transcriptomic coordinates}{Summer 2021} %{Jun. 2021 -- Aug. 2021}
+%       {Computational biologist intern at Ocean Genomics, Pittsburgh, PA}{ }
+%       \CVItemListStart
+%       \CVItem
+%       {Developed \href{https://github.com/OceanGenomics/mudskipper}{Mudskipper}, a software tool that converts alignments in SAM files - commonly used for storing
+% sequence alignments - from genomic coordinates to transcriptomic coordinates. $|$ \emph{\small{Rust}}}
+%         %\CVItem{\href{https://github.com/OceanGenomics/pufferfish/tree/soft-clip}{Puffaligner} is a fast and efficient aligner for short reads to a collection of reference sequences. I collaborated for
+%         %debugging steps of developing the softclip feature for this aligner. $|$ \emph{\small{C++}}}
+%       \CVItemListEnd
 
     \CVSubheading
       {Efficient and accurate methods for single-cell RNA-seq preprocessing}{2020 - 2021}
@@ -346,14 +346,20 @@ sequence alignments - from genomic coordinates to transcriptomic coordinates. $|
       {Improving the accuracy of fast RNA-seq quantification methods}{2016 - 2019}
       {Research assistant at Stony Brook University}{ }
       \CVItemListStart
-      \CVItem{Collaborated on the design and development of \href{https://github.com/COMBINE-lab/RapMap/tree/selective-alignment}{Selective-alignment}
-      to enhance the specificity and sensitivity of
-      lightweight alignment methods used in fast RNA-seq quantification approaches. $|$ \emph{\small{C++}}}
 
       \CVItem{Enhanced the probabilistic model of bulk RNA-seq in \href{https://github.com/COMBINE-lab/salmon}{Salmon}
       to improve the fidelity of the equivalence class-based \href{https://github.com/COMBINE-lab/salmon/tree/factorizations}{factorization}
       models for RNA-seq data.
       This new model improved the accuracy of abundance estimations, particularly in challenging cases, i.e., paralogous genes. $|$ \emph{\small{C++}}}
+
+      \CVItem{Collaborated on the design and development of \href{https://github.com/COMBINE-lab/RapMap/tree/selective-alignment}{Selective-alignment}
+      to enhance the specificity and sensitivity of
+      lightweight alignment methods used in fast RNA-seq quantification approaches. $|$ \emph{\small{C++}}}
+      \CVItem{
+        Improved the uncertainty estimation of missing data in RNA-seq quantification by using augmented-data bootstrap. This
+        approach is specifically useful in the presence of allelic imbalance.
+      }
+
       \CVItemListEnd
     % \CVSubheading
     %   {Design and development of efficient methods for single cell analysis}{2020 -- present}
@@ -519,7 +525,7 @@ descriptions maintain the consistency from prior sections
   \section{Community Involvement}
   \CVSubHeadingListStart
   \CVSubheading
-  {Hackathon Judge} {September 2023}
+  {Hackathon Judge} {September 2023 and 2024}
   {\href{https://www.hophacks.com/}{Hophacks}, Johns Hopkins University}{}
   \CVItemListStart
   \CVItem{Volunteered as a judge at an annual health-focused hackathon, where participants developed and presented applications over three days in a science fair format.}
@@ -574,9 +580,12 @@ recommends.
   \CVSubheading
     {Rob Patro}{Associate Professor, Department of Computer Science, University of Maryland}
     {rob@cs.umd.edu}{ }
-  \CVSubheading
-    {Travis Gagie}{Associate Professor, Faculty of Computer Science, Dalhousie University}
-    {travis.gagie@gmail.com}{ }
+\CVSubheading
+    {Michael I. Love}{Associate Professor, Department of Biostatistics, University of North Carolina}
+    {milove@email.unc.edu}{ }
+% \CVSubheading
+%     {Travis Gagie}{Associate Professor, Faculty of Computer Science, Dalhousie University}
+%     {travis.gagie@gmail.com}{ }
 \CVSubHeadingListEnd
 
 \end{document}
