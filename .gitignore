@@ -7,5 +7,6 @@
 *.run.xml
 *.fls
 *.pdf
+!MohsenZakeri-CV.pdf
 *.fdb_latexmk
 *.log
