@@ -230,7 +230,7 @@ like you should explain more about why the project is applicable to this job,
 use item list as is shown in the work experience section.
 \end{comment}
 
-\section{Selected Research Projects}
+\section{Research and Professional Experience}
   \CVSubHeadingListStart
 %    \CVSubheading
 %      {Title of Work}{When it was done}
@@ -250,21 +250,22 @@ use item list as is shown in the work experience section.
       %{Efficient Nanopore read classification}
       {Postdoc fellow at Johns Hopkins University}{ }
       \CVItemListStart
+      \CVItem{Developed Movi Color for multi-class and taxonomic classification of metagenomic samples.}
       \CVItem{Developed a method to compute exact matching queries (pseudo-matching lengths) with \href{https://github.com/mohsenzakeri/movi}{Movi}
       for real-time classification of Oxford Nanopore reads and fast host depletion with pangenomes. $|$ \emph{\small{C++}}}
       \CVItem{Contributed to the design of \href{https://github.com/vshiv18/sigmoni}{Sigmoni} for multi-class classification of Nanopore signals using a compressed
       full-text index (r-index).}
       \CVItemListEnd
-    \CVSubheading
-      {Converting genomic to transcriptomic coordinates}{Summer 2021} %{Jun. 2021 -- Aug. 2021}
-      {Computational biologist intern at Ocean Genomics, Pittsburgh, PA}{ }
-      \CVItemListStart
-      \CVItem
-      {Developed \href{https://github.com/OceanGenomics/mudskipper}{Mudskipper}, a software tool that converts alignments in SAM files - commonly used for storing
-sequence alignments - from genomic coordinates to transcriptomic coordinates. $|$ \emph{\small{Rust}}}
-        %\CVItem{\href{https://github.com/OceanGenomics/pufferfish/tree/soft-clip}{Puffaligner} is a fast and efficient aligner for short reads to a collection of reference sequences. I collaborated for
-        %debugging steps of developing the softclip feature for this aligner. $|$ \emph{\small{C++}}}
-      \CVItemListEnd
+%     \CVSubheading
+%       {Converting genomic to transcriptomic coordinates}{Summer 2021} %{Jun. 2021 -- Aug. 2021}
+%       {Computational biologist intern at Ocean Genomics, Pittsburgh, PA}{ }
+%       \CVItemListStart
+%       \CVItem
+%       {Developed \href{https://github.com/OceanGenomics/mudskipper}{Mudskipper}, a software tool that converts alignments in SAM files - commonly used for storing
+% sequence alignments - from genomic coordinates to transcriptomic coordinates. $|$ \emph{\small{Rust}}}
+%         %\CVItem{\href{https://github.com/OceanGenomics/pufferfish/tree/soft-clip}{Puffaligner} is a fast and efficient aligner for short reads to a collection of reference sequences. I collaborated for
+%         %debugging steps of developing the softclip feature for this aligner. $|$ \emph{\small{C++}}}
+%       \CVItemListEnd
 
     \CVSubheading
       {Efficient and accurate methods for single-cell RNA-seq preprocessing}{2020 - 2021}
@@ -306,14 +307,20 @@ sequence alignments - from genomic coordinates to transcriptomic coordinates. $|
       {Improving the accuracy of fast RNA-seq quantification methods}{2016 - 2019}
       {Research assistant at Stony Brook University}{ }
       \CVItemListStart
-      \CVItem{Collaborated on the design and development of \href{https://github.com/COMBINE-lab/RapMap/tree/selective-alignment}{Selective-alignment}
-      to enhance the specificity and sensitivity of
-      lightweight alignment methods used in fast RNA-seq quantification approaches. $|$ \emph{\small{C++}}}
 
       \CVItem{Enhanced the probabilistic model of bulk RNA-seq in \href{https://github.com/COMBINE-lab/salmon}{Salmon}
       to improve the fidelity of the equivalence class-based \href{https://github.com/COMBINE-lab/salmon/tree/factorizations}{factorization}
       models for RNA-seq data.
       This new model improved the accuracy of abundance estimations, particularly in challenging cases, i.e., paralogous genes. $|$ \emph{\small{C++}}}
+
+      \CVItem{Collaborated on the design and development of \href{https://github.com/COMBINE-lab/RapMap/tree/selective-alignment}{Selective-alignment}
+      to enhance the specificity and sensitivity of
+      lightweight alignment methods used in fast RNA-seq quantification approaches. $|$ \emph{\small{C++}}}
+      \CVItem{
+        Improved the uncertainty estimation of missing data in RNA-seq quantification by using augmented-data bootstrap. This
+        approach is specifically useful in the presence of allelic imbalance.
+      }
+
       \CVItemListEnd
     % \CVSubheading
     %   {Design and development of efficient methods for single cell analysis}{2020 -- present}
@@ -337,6 +344,7 @@ sequence alignments - from genomic coordinates to transcriptomic coordinates. $|
     %   {Stony Brook University}\\
     %   {{Design and development of a fast and accurate quantification method for short read metagenomic reads using lightweight alignment methods and optimization with Expected Maximization}$|$ \emph{\small{C++}} }
   \CVSubHeadingListEnd
+
 
   %-----WORK EXPERIENCE----------------------------------------------------------
 \begin{comment}
@@ -456,6 +464,8 @@ Remember to tailor the resume for to the position.
 
 \begin{refsection}
 *: co-first authorship
+\nocite{guccione2025incomplete}
+\nocite{zakeri2024movi}
 \nocite{shivakumar2024sigmoni}
 \nocite{wu2023seesaw}
 \nocite{he2022alevin}
@@ -470,6 +480,8 @@ Remember to tailor the resume for to the position.
 
 \section{Pre-prints}
 \begin{refsection}
+  \nocite{tan2025movi}
+  \nocite{majidian2025evani}
   \nocite{depuydt2023r}
   \nocite{zakeri2023movi}
   \nocite{srivastava2021accounting}
@@ -486,6 +498,7 @@ descriptions maintain the consistency from prior sections
 
 \section{Conferences and Presentations}
 \begin{refsection}
+\nocite{Zakeri2024bds}
 \nocite{zakeri2024recombseq}
 \nocite{Zakeri2023informatics}
 \nocite{Zakeri2023wemsa}
@@ -547,17 +560,22 @@ descriptions maintain the consistency from prior sections
   \CVSubHeadingListEnd
 \end{comment}
 
-\section{Community Involvement}
-\CVSubHeadingListStart
-\CVSubheading
-{Hackathon Judge} {September 2023 and 2024}
-{\href{https://www.hophacks.com/}{Hophacks}, Johns Hopkins University}{}
-\CVItemListStart
-\CVItem{Volunteered as a judge at an annual health-focused hackathon, where participants developed and presented applications over three days in a science fair format.}
-\CVItem{Assessed projects on creativity, usefulness, polish, and technical difficulty, contributing to the development and recognition of innovative health technologies.}
-\CVItemListEnd
-\CVSubHeadingListEnd
-
+  \section{Community Involvement}
+  \CVSubHeadingListStart
+  \CVSubheading
+  {Conference Scientific Committee} {May 2025}
+  {Johns Hopkins Annual Postdoc Conference}{}
+  \CVItemListStart
+  \CVItem{Provided volunteer support for postdoc conference organization and logistics}
+  \CVItemListEnd
+  \CVSubheading
+  {Hackathon Judge} {2023 and 2024}
+  {\href{https://www.hophacks.com/}{Hophacks}, Johns Hopkins University}{}
+  \CVItemListStart
+  \CVItem{Volunteered as a judge at an annual health-focused hackathon, where participants developed and presented applications over three days in a science fair format.}
+  \CVItem{Assessed projects on creativity, usefulness, polish, and technical difficulty, contributing to the development and recognition of innovative health technologies.}
+  \CVItemListEnd
+  \CVSubHeadingListEnd
 
 %-----SKILLS-------------------------------------------------------------------
 \begin{comment}
