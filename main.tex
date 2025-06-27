@@ -64,7 +64,9 @@ strokes, sans-serif fonts are sans (without) these strokes.
 \usepackage[minnames=4, 
             maxnames=99,
             sorting=none,
-            style=numeric]{biblatex}
+            % style=numeric,
+            style = apa,
+            ]{biblatex}
 \addbibresource{lib.bib}
 
 % Adjust margins
@@ -228,7 +230,7 @@ try to briefly explain what you did and why it is relevant to the position you
 are seeking
 \end{comment}
 
-\section{Work Experience}
+\section{Professional Experience}
   \CVSubHeadingListStart
 %    \CVSubheading %Example
 %      {What you did}{When you worked there}
@@ -270,7 +272,7 @@ like you should explain more about why the project is applicable to this job,
 use item list as is shown in the work experience section.
 \end{comment}
 
-\section{Research and Professional Experience}
+\section{Research Experience}
   \CVSubHeadingListStart
 %    \CVSubheading
 %      {Title of Work}{When it was done}
@@ -386,32 +388,43 @@ use item list as is shown in the work experience section.
   \CVSubHeadingListEnd
 
 \section{Peer Reviewed Publications}
-
-\begin{refsection}
 *: co-first authorship
-\nocite{guccione2025incomplete}
-\nocite{zakeri2024movi}
-\nocite{shivakumar2024sigmoni}
-\nocite{wu2023seesaw}
-\nocite{he2022alevin}
-\nocite{skoufos2022agamemnon}
-\nocite{almodaresi2021puffaligner}
-\nocite{srivastava2020alignment}
-\nocite{sarkar2018towards}
-\nocite{ismb2017factorization}
-%\nocite{almodaresi2017distribution}
-\printbibliography[heading = none]
-\end{refsection}
+\begin{itemize}
+\item \fullcite{guccione2025incomplete}
+\item \fullcite{zakeri2024movi}
+\item \fullcite{shivakumar2024sigmoni}
+\item \fullcite{wu2023seesaw}
+\item \fullcite{he2022alevin}
+\item \fullcite{skoufos2022agamemnon}
+\item \fullcite{almodaresi2021puffaligner}
+\item \fullcite{srivastava2020alignment}
+\item \fullcite{sarkar2018towards}
+\item \fullcite{ismb2017factorization}
+\end{itemize}
+
+% \begin{refsection}
+% \nocite{guccione2025incomplete}
+% \nocite{zakeri2024movi}
+% \nocite{shivakumar2024sigmoni}
+% \nocite{wu2023seesaw}
+% \nocite{he2022alevin}
+% \nocite{skoufos2022agamemnon}
+% \nocite{almodaresi2021puffaligner}
+% \nocite{srivastava2020alignment}
+% \nocite{sarkar2018towards}
+% \nocite{ismb2017factorization}
+% %\nocite{almodaresi2017distribution}
+% \printbibliography[heading = none]
+% \end{refsection}
 
 \section{Pre-prints}
-\begin{refsection}
-  \nocite{tan2025movi}
-  \nocite{majidian2025evani}
-  \nocite{depuydt2023r}
-  \nocite{srivastava2021accounting}
-  \nocite{zakeri2021likeforlike}
-  \printbibliography[heading = none]
-\end{refsection}
+\begin{itemize}
+  \item \fullcite{tan2025movi}
+  \item \fullcite{majidian2025evani}
+  \item \fullcite{depuydt2023r}
+  \item \fullcite{srivastava2021accounting}
+  \item \fullcite{zakeri2021likeforlike}
+\end{itemize}
 
 %-----CONFERENCES AND PRESENTATIONS--------------------------------------------
 \begin{comment}
@@ -421,18 +434,17 @@ descriptions maintain the consistency from prior sections
 
 
 \section{Conferences and Presentations}
-\begin{refsection}
-\nocite{Zakeri2024bds}
-\nocite{zakeri2024recombseq}
-\nocite{Zakeri2023informatics}
-\nocite{Zakeri2023wemsa}
-%\nocite{Shivakumar2023Poster}
-\nocite{Boots2022Poster}
-%\nocite{Sarkar2020}
-\nocite{CedarPoster2019}
-%\nocite{zakeri2017poster}
-\printbibliography[heading = none]
-\end{refsection}
+\begin{itemize}
+  \item \fullcite{Zakeri2024bds}
+  \item \fullcite{zakeri2024recombseq}
+  \item \fullcite{Zakeri2023informatics}
+  \item \fullcite{Zakeri2023wemsa}
+  %\nocite{Shivakumar2023Poster}
+  \item \fullcite{Boots2022Poster}
+  %\nocite{Sarkar2020}
+  \item \fullcite{CedarPoster2019}
+  %\nocite{zakeri2017poster}
+\end{itemize}
 
 %-----HONORS AND AWARDS--------------------------------------------------------
 % \section{Honors and Awards}
@@ -474,26 +486,20 @@ descriptions maintain the consistency from prior sections
   {NIH/NHGRI R21 grant R21HG013433 (\$377K)}{}
   \CVSubHeadingListEnd
 
-\section{Mentoring Experience}
-\CVSubHeadingListStart
-  \CVSubheading
-    {Mentor for Undergraduate Research Project}{2024--2025}
-    {Student: Steven Tan -- \textit{Movi Color} for taxonomic classification}{}
-\CVSubHeadingListEnd
-
-
-
-
 %-----TEACHING EXPERIENCE------------------------------------------------------
 \begin{comment}
     Section is here as it applied to my application for positions in academia. 
     Remember to tailor the resume for to the position.
 \end{comment}
-    \section{Teaching Experience}
+    \section{Teaching and Mentoring}
       \CVSubHeadingListStart
     %    \CVSubheading
     %      {What}{When}
     %      {School}{Where}
+      \CVSubheading
+      {Mentor for Undergraduate Research Project}{2024--2025}
+      {Johns Hopkins University, Baltimore, MD}\\
+      {Student: Steven Tan}{}
       \CVSubheading
       {Instructor of a \href{https://engineering.jhu.edu/education/undergraduate-studies/heart-heroic-courses/}{HEART} course}{Fall 2023}
       {Johns Hopkins University, Baltimore, MD}\\
