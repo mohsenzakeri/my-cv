@@ -155,9 +155,10 @@ which heading appropriate for the document you are creating.
 \begin{minipage}[c]{0.4\textwidth}
     \textbf{\Huge \scshape{Mohsen Zakeri}} \\ 
     % \scshape sets small capital letters, remove if desired
-    %\small{+1 631-877-5174} \\
+    \\
+    % \small{+1 631-877-5174} \\
+    \href{mailto:mohs.zakeri@gmail.com}{mohs.zakeri@gmail.com} | Baltimore, MD \\
     \href{https://www.mohsenzakeri.com}{mohsenzakeri.com} \\
-    \href{mailto:mohs.zakeri@gmail.com}{mohs.zakeri@gmail.com} \\
     % Be sure to use a professional *personal* email address
     % \href{https://www.linkedin.com/in/mohsen-zakeri-56017576/}{\underline{linkedin.com/in/mohsen-zakeri-56017576}} \\
     % you should adjust you linked in profile name to be professional and recognizable
@@ -203,7 +204,7 @@ information though). Whatever order you choose be consistent throughout.
   \CVSubHeadingListStart
     \CVSubheading{Postdoctoral Fellow, Computer Science Department}{2022 - present}
       {Johns Hopkins University, Baltimore, MD}\\
-      {Advisor: Ben Langmead}{ }
+      {Advisor: \textbf{Ben Langmead}}{ }
   \CVSubHeadingListEnd
 
   %-----SKILLS-------------------------------------------------------------------
@@ -212,17 +213,25 @@ This section is compressed from the various skills sections that Euro CV
 recommends.
 \end{comment}
 
-\section{Skills}
- \begin{itemize}[leftmargin=0.5cm, label={}]
-    \small{\item{
-    \textbf{Sequencing Technologies}{: Oxford Nanopore (ONT), PacBio, bulk and Single-cell RNA-seq, Single-nucleus RNA-seq, DNA-seq}
-    }} \\
-    \textbf{High Performance Computing}{: Valgrind}\\
-    %  \textbf{Languages}{: Farsi (Native), English (proficient)} \\
-     \textbf{Programming}{: C++, Python (NumPy, SciPy, Matplotlib, Pandas), Rust, R, C\#} \\
-     \textbf{Document Creation}{: Microsoft Office Suite, LaTex} \\
- \end{itemize}
+\section{Technical Skills}
+\CVSubHeadingListStart
 
+  \CVSubheading{\textbf{Programming}}{}{}{}
+    \CVItemListStart
+    \vspace{-0.5cm}
+      \CVItem{\textbf{High-Performance Computing:} CUDA, OpenMP, SIMD, profiling (Valgrind, pprof), Latency hiding}
+      \CVItem{\textbf{Languages:} C++, Python (NumPy, SciPy, Pandas, Matplotlib), Rust, R, C\#}
+      \CVItem{\textbf{Environments:} Linux, Bash, Conda/mamba, Docker, Slurm-managed clusters}
+    \CVItemListEnd
+    \CVSubheading{\textbf{Bioinformatics}}{}{}{}
+    \vspace{-0.5cm}
+    \CVItemListStart
+      \CVItem{\textbf{Tools:} SAMtools, Bowtie2, BWA/BWA-MEM, minimap2, IGV, Kraken2, Salmon, DESeq2}
+      \CVItem{\textbf{Analysis:} Sequence Alignment/Mapping, Quantification, Metagenomics, RNA-seq (bulk \& single-cell/10x)}
+      \CVItem{\textbf{Sequencing Technologies:} Illumina, 10x Genomics, Oxford Nanopore (ONT), PacBio}
+    \CVItemListEnd
+
+\CVSubHeadingListEnd
 %-----PROJECTS AND RESEARCH----------------------------------------------------
 \begin{comment}
 Ideally the title of the work should speak for what it is. However if you feel
@@ -243,6 +252,7 @@ use item list as is shown in the work experience section.
       \CVItem{Designed and developed \href{https://github.com/mohsenzakeri/movi}{Movi},
       a data structure based on the Move-Structure for indexing pangenomes. Movi is a full-text index 
       which scales very well for highly similar references while being very fast to query. $|$ \emph{\small{C++}}}
+      \CVItem{Designed a data structure which minimizes the number of cache misses per query. Minimized the latency of remaining cache misses by C++ prefetching.}
       \CVItemListEnd
 
     \CVSubheading
@@ -308,7 +318,7 @@ use item list as is shown in the work experience section.
       {Research assistant at Stony Brook University}{ }
       \CVItemListStart
 
-      \CVItem{Enhanced the probabilistic model of bulk RNA-seq in \href{https://github.com/COMBINE-lab/salmon}{Salmon}
+      \CVItem{Developed a probabilistic model to improve the EM-based bulk RNA-seq quantification \href{https://github.com/COMBINE-lab/salmon}{Salmon}
       to improve the fidelity of the equivalence class-based \href{https://github.com/COMBINE-lab/salmon/tree/factorizations}{factorization}
       models for RNA-seq data.
       This new model improved the accuracy of abundance estimations, particularly in challenging cases, i.e., paralogous genes. $|$ \emph{\small{C++}}}
